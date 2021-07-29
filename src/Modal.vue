@@ -448,6 +448,13 @@ export default {
         return
       }
 
+      const cls = document.querySelector('body').classList;
+      if (nextState) {
+        cls.add('v-modal')
+      } else {
+        cls.remove('v-modal')
+      }
+
       const beforeEventName = visible
         ? 'before-close'
         : 'before-open'
